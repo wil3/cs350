@@ -56,7 +56,19 @@ Detecting deadlocks in Java,
 ```
 jcmd <pid> Thread.print
 ```
+The first thing we must idenfity is the process ID of our Java application.
+There are multiple ways to do this but one quick way in Linux is using the `ps`
+command. For example,
 
+```
+ps -aux | grep java
+```
+This command will pipe the `ps` output to the grep command. Grep allows us to
+search and filter only results that include the word `java`. From this output
+we will take the output of the second value which will be the integer
+representing the process ID. (Note: to prove this to your self type `ps -aux |
+grep less` which will show the column headers). Once we have the
+process ID we can now execute the command, for example,
 ```
 jcmd 15985 Thread.print
 ```

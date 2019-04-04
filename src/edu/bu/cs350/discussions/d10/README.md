@@ -53,6 +53,7 @@ Additional Reading:
 
 
 2)  Other Concurrent Utilities in Java
+
 A list of all other classes that are thread same can be viewed [here](https://docs.oracle.com/javase/8/docs/api/index.html?java/util/concurrent/package-summary.html).
 
 3) What are deadlocks?
